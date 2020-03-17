@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Ma+Shan+Zheng&display=swap');
+@font-face{
+    font-family:'fonteLogo' ;
+    src: url("../_fontes/bubblegum-sans-regular.otf");
+}
+/*comentario*/
+figure.foto-legenda img{
+    width:100%;
+    height:100%;
+}
+body{
+    font-family:Arial,sans-serif;
+    background-color: white;
+    color:rgba(0,0,0,1);
+}
+p{
+    text-align:justify;
+    text-indent: 50px;
+}
+a{
+    color:#606060;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline
+}
+figure.foto-legenda{
+    border:4px solid white; /*cria uma borda solida*/
+    box-shadow:1px 1px 4px black; /*faz uma sombra na borda*/
+    position:relative; /*está relativa a imagem*/
+    width:439px; /*tamanho*/
+}
+figure.foto-legenda figcaption{
+    opacity:0; /*opacidade zero faz sumir a imagem*/
+    position:absolute;/*o figcaption pode se mover em cima de qualquer elemento*/
+    top:0px; /*faz is para o topo, de qualquer maneira, ignorando os elementos*/
+    background-color: rgba(0,0,0,.4); /*transparencia*/
+    color:white;
+    width:100%; /*faz o texto figcaption e seu background cobrir a imagem inteira*/
+    height:100%;
+    padding:10px;
+    box-sizing:border-box; /*cria um limite, uma borda interior na caixa para que nao vaze para fora*/
+    transition:.4s;  /*tempo de transição para o figcaption*/
+}
+figure.foto-legenda:hover figcaption{
+    opacity: 1; /*a classe hover faz uma animação ao passar o mouse em cima do elemento*/
+}
+nav#menu ul{
+    list-style:none; /*remove o ponteiro de lista*/
+    text-transform:uppercase; /*transforma todo o texto para maiusculo*/
+    position:absolute;
+    top:-20px; /*o topo recebe um padding nativo, para remover isso,usamos um valor negativo*/
+    left:300px;
+}
+nav#menu li{
+    display:inline-block; /*alinha o conteudo*/
+    padding:10px;
+    margin:2px;
+    transition:background-color 1s;/*usando o transition para monitorar o background color passando um parametro de 1s*/
+}
+nav#menu{
+    display:block; /*os blocks podem flutuar pela tela*/
+}
+nav#menu h1{
+    display:none; /*oculta o elemento em questão*/
+}
+nav#menu li:hover{
+    background-color:#606060; /*cria uma animação nos botoes de menu*/
+}
+nav#menu a{
+    text-decoration: none;
+    color:#000000;
+}
+nav#menu a:hover{
+    color:#ffffff;
+    text-decoration:underline;
+}
+div#interface{
+    width:900px;
+    background-color:#ffffff;
+    margin:-20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    padding:10px;
+}
+header#cabecalho img#icone{
+    position:absolute;
+    left:900px;
+    top:70px;
+}
+header#cabecalho{
+    border-bottom:1px #606060 solid;
+    height:150px;
+    background:url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+header#cabecalho h1{
+    font-family:'fonteLogo';
+    font-size:30pt;
+    color:#606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding:0px;
+    margin-bottom:0px;
+}
+header#cabecalho h2{
+    /*font-family:arial, sans-serif;*/
+    font-family: 'Amatic SC', cursive;
+    color:#888888;
+    font-size:15pt;
+    padding:0px;
+    margin-top:0px;
+}
+section#corpo{
+    display:block;
+    float:left;
+    width:500px;
+    border-right:1px solid #606060;
+    padding-right:10px;
+}
+aside#lateral{
+    display:block;
+    width:350px;
+    float:right;
+    padding-right:5px;
+    background-color:#dddddd;
+    padding:10px;
+    margin-top:10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5   );
+}
+aside#lateral p{
+    padding-left:5px;
+}
+aside#lateral h2{
+    background-color: #606060;
+    font-size:12pt;
+    color:#ffffff;
+    padding:5px;
+}
+aside#lateral h1{
+    font-family:'fonteLogo',sans-serif;
+    font-size:20pt;
+    color:#606060;
+    margin:0px;
+}
+footer#rodape{
+    border-top:1px solid #606060;
+    clear:both;
+}
+footer#rodape p{
+    text-align:center;
+}
+table#tabela-spec{
+    border:1px solid #606060;
+    border-spacing:0px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+table#tabela-spec td{
+    border:1px solid #606060;
+    padding:10px;
+    text-align:right;
+    vertical-align:middle;
+}
+table#tabela-spec td.ce{
+    color:#ffffff;
+    background-color: #606060;
+    vertical-align:top;
+    font-weight: bold;
+}
+table#tabela-spec td.cd{
+    background-color: #cecece;
+    text-align:left;
+}
+table#tabela-spec caption{
+    color:#888888;
+    font-size:13pt;
+    font-weight: bolder;
+}
+table#tabela-spec caption span{
+    display:block;
+    float:right;
+    color:#000000;
+    font-size:8px;
+    margin-top:10px;
+}
+article#noticia-principal h2{
+    font-size:12pt;
+    color:#606060;
+    background-color:#dddddd;
+    padding: 5px 0px 5px 10px;
+    margin:10px 0px 10px 0px;
+}
+header#cabecalho-do-artigo h1{
+    font-family:'fonteLogo' ,sans-serif;
+    font-size:20pt;
+    color:#606060;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+header#cabecalho-do-artigo h2{
+    font-size:13pt;
+    color:#cecece;
+    background-color:#ffffff;
+    margin-bottom:0px;
+ }
+header#cabecalho-do-artigo h3{
+    font-size: 12px;
+    color:#606060;
+}
+.dir{
+    text-align:right;
+}
